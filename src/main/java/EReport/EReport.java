@@ -16,10 +16,9 @@ import BrowserUtils.BrowserUtilities;
 
 public class EReport{
 	
-	static WebDriver driver;
 	public static ExtentReports reports;
     public static ExtentTest logger;
-    static  String sPath = System.getProperty("user.dir")+"//Reports//sampleReport.html";
+    static  String sPath = System.getProperty("user.dir")+"//Reports//Report.html";
     
     public static ExtentReports createInstance() {
     	if(reports!=null) {
@@ -34,7 +33,7 @@ public class EReport{
     public static String takeScreenshot() throws IOException {
         TakesScreenshot srcShot = ((TakesScreenshot) BrowserUtilities.driver);
         File srcFile = srcShot.getScreenshotAs(OutputType.FILE);
-        String imagePath = System.getProperty("user.dir")+"//ScreenShot//1.png";
+        String imagePath = System.getProperty("user.dir")+"//ScreenShot//screenshot.png";
         File destFile = new File(imagePath);
         FileUtils.copyFile(srcFile,destFile);
         return imagePath;
