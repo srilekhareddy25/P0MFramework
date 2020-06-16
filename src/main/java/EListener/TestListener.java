@@ -39,7 +39,7 @@ public class TestListener implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		
-		EReport.logger.log(LogStatus.FAIL, result.getMethod().getMethodName()+" Failed..");	
+		EReport.logger.log(LogStatus.FAIL, result.getMethod().getMethodName()+" Failed");	
 
 		
 		
